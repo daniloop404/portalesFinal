@@ -1,0 +1,51 @@
+<div class="container my-5">
+    <h1 class="text-center mb-5">Acerca de Librería Ávila</h1>
+  
+    <section class="mb-5">
+      <h2 class="mb-3">Nuestra Historia</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p>Fundada en 1985 por Carlos Ávila, Librería Ávila nació de la pasión por los libros y el deseo de crear un espacio cultural en el corazón de Quito. Lo que comenzó como una pequeña tienda en la Avenida Amazonas, se ha convertido en un referente literario de la ciudad.</p>
+          <p>A lo largo de casi cuatro décadas, hemos crecido junto con la comunidad, expandiendo nuestra colección y organizando eventos literarios que han enriquecido el panorama cultural de Quito.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="assets/images/fachada libreria.webp" alt="Fachada de Librería Ávila" class="img-fluid rounded">
+        </div>
+      </div>
+    </section>
+  
+    <section class="mb-5">
+      <h2 class="mb-3">Nuestro Fundador</h2>
+      <div class="row align-items-center">
+        <div class="col-md-3">
+          <img [src]="fundador.imagen" [alt]="fundador.nombre" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-9">
+          <h3>{{fundador.nombre}}</h3>
+          <p>Carlos Ávila, nacido y criado en Quito, siempre soñó con crear un espacio donde los amantes de la literatura pudieran reunirse, explorar nuevos mundos a través de los libros y compartir sus pasiones. Su visión ha sido el motor que ha impulsado a Librería Ávila a convertirse en el corazón literario de la ciudad.</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="mb-5">
+        <h2 class="mb-3">Nuestro Equipo</h2>
+        <p>En Librería Ávila, nuestro equipo comparte la pasión por los libros y el compromiso de ofrecer una experiencia única a cada cliente.</p>
+        <div class="row">
+          <div class="col-md-4" *ngFor="let empleado of empleados">
+            <div class="card mb-4 text-center">
+              <img [src]="empleado.imagen" [alt]="empleado.nombre" class="card-img-top img-employee mx-auto">
+              <div class="card-body">
+                <h5 class="card-title">{{empleado.nombre}}</h5>
+                <p class="card-text"><strong>{{empleado.cargo}}</strong></p>
+                <p class="card-text">{{empleado.descripcion}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+    <section>
+      <h2 class="mb-3">Nuestra Misión</h2>
+      <p>En Librería Ávila, nuestra misión es fomentar el amor por la lectura y ser un faro cultural en Quito. Nos esforzamos por ofrecer una cuidadosa selección de libros, desde clásicos atemporales hasta las últimas novedades literarias, y crear un espacio acogedor donde los lectores puedan descubrir, aprender y compartir.</p>
+    </section>
+  </div>

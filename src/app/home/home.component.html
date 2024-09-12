@@ -1,0 +1,65 @@
+<header id="inicio">
+    <div class="carousel">
+        <div class="carousel-item" *ngFor="let slide of slides; let i = index" [class.active]="currentSlide === i">
+            <img [src]="slide.image" class="d-block w-100" [alt]="slide.alt">
+            <div class="carousel-caption">
+                <h2>{{slide.title}}</h2>
+                <p>{{slide.description}}</p>
+            </div>
+        </div>
+        <button class="carousel-control-prev" (click)="onPreviousClick()">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" (click)="onNextClick()">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</header>
+
+<section id="testimonios" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4 slide-in-left">Lo que dicen nuestros clientes</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4" *ngFor="let testimonio of testimonios">
+                <div class="card text-center">
+                    <img [src]="testimonio.imagen" class="card-img-top rounded-circle mx-auto mt-3" alt="Foto de {{testimonio.autor}}" style="width: 150px; height: 150px; object-fit: cover;">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p class="mb-3">"{{testimonio.texto}}"</p>
+                            <footer class="blockquote-footer">{{testimonio.autor}}</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="recomendados" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4 slide-in-left">Libros Recomendados</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4" *ngFor="let libro of librosRecomendados">
+                <div class="card h-100">
+                    <img [src]="libro.imagen" class="card-img-top" [alt]="libro.titulo">
+                    <div class="card-body">
+                        <h5 class="card-title">{{libro.titulo}}</h5>
+                        <p class="card-text">{{libro.autor}}</p>
+                        <p>{{libro.descripcion}}</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="cta" class="py-5 text-white">
+    <div class="container text-center">
+        <h2 class="fade-in">¡Únete a nuestro club de lectura!</h2>
+        <p class="lead fade-in">Recibe recomendaciones personalizadas y participa en eventos exclusivos.</p>
+        <button class="btn btn-light btn-lg" (click)="onSubscribe()">Inscríbete ahora</button>
+    </div>
+</section>

@@ -1,0 +1,60 @@
+body {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+  }
+  
+  .navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  
+  .card {
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-img-top {
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .card-text {
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  footer {
+    background-color: #343a40;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in;
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-in-left {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }

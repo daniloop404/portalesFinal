@@ -1,0 +1,41 @@
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .rounded-circle {
+    border: 3px solid #007bff;
+  }
+  
+  section {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .img-employee {
+    width: auto; /* Ajusta el tamaño de la imagen */
+    height: 300px; /* Asegúrate de que sea cuadrada */
+    object-fit: cover;
+    margin-bottom: 10px; /* Espacio entre la imagen y el contenido */
+  }
+  
+  .card {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .mx-auto {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
